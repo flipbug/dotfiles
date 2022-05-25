@@ -211,3 +211,4 @@ smart_gaps on
 
 exec --no-startup-id feh --bg-scale /home/dan/Pictures/Wallpapers/wallhaven-294584.jpg
 exec --no-startup-id compton
+exec --no-startup-id redshift

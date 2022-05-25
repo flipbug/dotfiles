@@ -92,7 +92,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sleft="xrandr --output DP-1 --auto --left-of eDP-1"
+  
+#export PATH="/home/dan/anaconda3/bin:$PATH"
+export RACK_DIR=~/Development/vcv/Rack-SDK
+alias sleft="xrandr --output DP1 --auto --left-of eDP1"
 alias gsleep="dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 "org.freedesktop.login1.Manager.Suspend" boolean:true"
 alias hibernate="dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 "org.freedesktop.login1.Manager.Hibernate" boolean:true"
 alias py="python"
+
+PATH="/home/dan/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/dan/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/dan/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/dan/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/dan/perl5"; export PERL_MM_OPT;
