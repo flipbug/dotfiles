@@ -94,7 +94,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
   
 #export PATH="/home/dan/anaconda3/bin:$PATH"
+export PATH="/home/dan/.local/bin:$PATH"
 export RACK_DIR=~/Development/vcv/Rack-SDK
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
 alias sleft="xrandr --output DP1 --auto --left-of eDP1"
 alias gsleep="dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 "org.freedesktop.login1.Manager.Suspend" boolean:true"
 alias hibernate="dbus-send --system --print-reply --dest=org.freedesktop.login1 /org/freedesktop/login1 "org.freedesktop.login1.Manager.Hibernate" boolean:true"

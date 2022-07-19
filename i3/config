@@ -176,16 +176,19 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        font pango:Roboto, Font Awesome 9
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        i3bar_command i3bar -t
-        colors {
-            background $bartransparent
-            inactive_workspace $bartransparent $bartransparent $darkwhite
-            focused_workspace $transparent $transparent $white
-        }
-}
+#bar {
+#        font pango:Roboto, Font Awesome 9
+#        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#        i3bar_command i3bar -t
+#        colors {
+#            background $bartransparent
+#            inactive_workspace $bartransparent $bartransparent $darkwhite
+#            focused_workspace $transparent $transparent $white
+#        }
+#}
+
+# Start Polybar
+exec_always --no-startup-id $HOME/dotfiles/i3/polybar-launch.sh
 
 # Keybindings
 
@@ -212,3 +215,6 @@ smart_gaps on
 exec --no-startup-id feh --bg-scale /home/dan/Pictures/Wallpapers/wallhaven-294584.jpg
 exec --no-startup-id compton
 exec --no-startup-id redshift
+
+exec "setxkbmap -layout us,ch"
+exec "setxkbmap -option 'grp:rwin_toggle'"
